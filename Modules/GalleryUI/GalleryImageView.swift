@@ -21,11 +21,11 @@ struct GalleryImageView<Model: GalleryImageViewModel>: View {
     }
 }
 
-public class GalleryImageViewModelPreview: GalleryImageViewModel {
-    public let item: GalleryBean
-    public var image: UIImage?
+class GalleryImageViewModelPreview: GalleryImageViewModel {
+    let item: GalleryBean
+    var image: UIImage?
     
-    public init(item: GalleryBean) {
+    init(item: GalleryBean) {
         self.item = item
         image = createDummyImage(size: CGSize(width: 100, height: 100))
     }
@@ -42,9 +42,9 @@ public class GalleryImageViewModelPreview: GalleryImageViewModel {
 }
 
 extension GalleryImageViewModelPreview {
-    public func hash(into hasher: inout Hasher) {}
+    func hash(into hasher: inout Hasher) {}
     
-    public static func == (lhs: GalleryImageViewModelPreview, rhs: GalleryImageViewModelPreview) -> Bool {
+    static func == (lhs: GalleryImageViewModelPreview, rhs: GalleryImageViewModelPreview) -> Bool {
         lhs === rhs
     }
 }

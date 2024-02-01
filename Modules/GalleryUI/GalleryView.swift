@@ -25,10 +25,10 @@ public struct GalleryView<Model: GalleryViewModel>: View {
     }
 }
 
-public class GalleryViewModelPreview: GalleryViewModel {
-    public var items: [GalleryImageViewModelPreview]
+class GalleryViewModelPreview: GalleryViewModel {
+    var items: [GalleryImageViewModelPreview]
     
-    public init() {
+    init() {
         self.items = GalleryBean.dummyList.map { GalleryImageViewModelPreview(item: $0) }
     }
     
